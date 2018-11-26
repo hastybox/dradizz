@@ -1,5 +1,5 @@
 val versions = new {
-  val http4s = "0.18.19"
+  val http4s = "0.18.21"
   val logback = "1.2.3"
   val commonsIo = "2.6"
   val pureconfig = "0.9.1"
