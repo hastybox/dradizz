@@ -14,13 +14,13 @@ trait MediaDataSource[F[_], M <: Media] {
     * @param title a (partial) title
     * @return a list of possible results, ordered by relevance
     */
-  def find(title: String): F[List[Media]]
+  def find(title: String): F[List[M]]
 
   /**
     * find a media item by one of its external ids
     * @param id an external id that is supported by this media source
     * @return a media that is associated with the id
     */
-  def find(id: ExternalMediaId): F[Option[Media]]
+  def find(id: ExternalMediaId): F[Option[M]]
 
 }
