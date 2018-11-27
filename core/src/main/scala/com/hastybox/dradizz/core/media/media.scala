@@ -1,11 +1,11 @@
 package com.hastybox.dradizz.core.media
 
 /**
-  * Some kind of media information: a tv show or a movie
+  * Common media properties shared between internal and external media representations
   *
   * @author suicide (suicide@get-it.us)
   */
-trait Media {
+trait MediaCommon {
 
   /**
     * title of the media item
@@ -28,3 +28,17 @@ trait Media {
   * @author suicide (suicide@get-it.us)
   */
 trait ExternalMediaId
+
+/**
+  * Some kind of general, external media information of a tv show or a movie
+  *
+  * @author suicide (suicide@get-it.us)
+  */
+trait MediaInfo extends MediaCommon
+
+/**
+  * Internal representation of a tv show or a movie
+  *
+  * @author suicide (suicide@get-it.us)
+  */
+trait Media extends MediaCommon
