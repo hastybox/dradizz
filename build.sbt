@@ -4,7 +4,7 @@ val versions = new {
   val commonsIo = "2.6"
   val pureconfig = "0.9.1"
   val guava = "25.1-jre"
-  val scala = "2.12.7"
+  val scala = "2.12.8"
   val scalaLogging = "3.9.0"
   val scalaTest = "3.0.5"
 }
