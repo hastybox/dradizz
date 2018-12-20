@@ -9,17 +9,27 @@ trait MediaCommon {
 
   /**
     * title of the media item
+    *
     * @return string title
     */
   def title: String
 
   /**
     * external media Ids of this media item
+    *
     * @return all known external media ids
     */
   def externalIds: Set[ExternalMediaId]
 
 }
+
+/**
+  * a unique media id
+  *
+  * @param uid internal String representation
+  * @author suicide (suicide@get-it.us)
+  */
+case class MediaId(uid: String)
 
 
 /**
@@ -41,4 +51,11 @@ trait MediaInfo extends MediaCommon
   *
   * @author suicide (suicide@get-it.us)
   */
-trait Media extends MediaCommon
+trait Media extends MediaCommon {
+
+  /**
+    * the unique id of this instance
+    * @return unique id
+    */
+  def id: MediaId
+}
