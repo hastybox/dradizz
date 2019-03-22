@@ -3,10 +3,12 @@ val versions = new {
   val logback = "1.2.3"
   val commonsIo = "2.6"
   val pureconfig = "0.9.1"
+  val refined = "0.9.4"
   val guava = "25.1-jre"
   val scala = "2.12.8"
   val scalaLogging = "3.9.0"
   val scalaTest = "3.0.5"
+  val scalaCheck = "1.14.0"
 }
 
 val dependencies = {
@@ -18,10 +20,12 @@ val dependencies = {
     val `http4s-dsl` = "org.http4s" %% "http4s-dsl" % http4s
     val `commons-io` = "commons-io" % "commons-io" % commonsIo
     val pureconfig = "com.github.pureconfig" %% "pureconfig" % versions.pureconfig
+    val refined = "eu.timepit" %% "refined" % versions.refined
     val guava = "com.google.guava" % "guava" % versions.guava
     val `logback-classic` = "ch.qos.logback" % "logback-classic" % logback
     val `scala-logging` = "com.typesafe.scala-logging" %% "scala-logging" % scalaLogging
     val `scala-test` = "org.scalatest" %% "scalatest" % scalaTest % "test"
+    val scalacheck = "org.scalacheck" %% "scalacheck" % scalaCheck % "test"
   }
 }
 
@@ -48,8 +52,10 @@ lazy val core = Project(
         `http4s-async-http-client`,
         `commons-io`,
         pureconfig,
+        refined,
         guava,
         `scala-test`,
+        scalacheck,
         `scala-logging`,
         `logback-classic`
       )

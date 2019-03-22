@@ -13,3 +13,10 @@ trait Downloadable
   * @author suicide (suicide@get-it.us)
   */
 trait DownloadContainer
+
+
+/**
+  * A unique identifier that represents a download of a [[DownloadContainer]]. There might be multiple downloads the
+  * same container each with a unique id
+  */
+trait DownloadId

@@ -9,8 +9,8 @@ import scala.language.higherKinds
   *
   * @author suicide (suicide@get-it.us)
   */
-trait DownloadableSearchService[F[_], M <: Media, D <: Downloadable] {
+trait DownloadableSearchService[F[_], Med <: Media, Down <: Downloadable] {
 
-  def find(media: M): F[List[D]]
+  def find(media: Med): F[List[Down]]
 
 }
